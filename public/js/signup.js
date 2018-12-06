@@ -116,7 +116,10 @@ function checkFieldsInstant(element) {
 
 }
 
-  
+$('button').click(function(e) {
+	e.preventDefault();
+	$(".flip-form").css("transform", "rotateY(180deg)");
+  });
 
 $(document).ready(function() {
     var formSubmitted = !1;

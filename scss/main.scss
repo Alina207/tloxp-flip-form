@@ -1,7 +1,8 @@
 @import "_custom";
 
-.highlight {
-    background-color: #FCD800; }
+  .highlight {
+    background-color: #FCD800; 
+  }
   
   .banner {
     background: url("../../tlo/img/signup/P-signup-hero2-D-121217.jpg") no-repeat top right;
@@ -17,12 +18,48 @@
   .banner h2 {
      font-style: italic; 
   }
-  
+
+
   .right-container .card-header {
     text-align: center;
     border: 0;
     background-color: #e2e4e6; 
   }
+
+  .flip-form {
+    position: relative;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    transition: all .6s ease-in-out;
+  }
+  
+  .flip-form-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  .flip-form-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  
+  .flip {
+      transform: translate(0, -50%) rotateY(180deg);
+      position: relative;
+    }
   
   .right-container .form-control:focus {
     border-color: #00a6ca; 
@@ -36,7 +73,7 @@
     border-color: #00a6ca;
     outline: 0;
   }
-    
+
   .signup-form .card {
     background-color: #e2e4e6;
   }
@@ -125,6 +162,7 @@
     border: none;
     -webkit-text-fill-color: #3f474d;
     -webkit-box-shadow: none;
+    box-shadow: none;
     transition: background-color 5000s ease-in-out 0s;
   }
   
